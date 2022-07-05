@@ -1,28 +1,24 @@
-package com.faltdor.accountservice;
+package com.faltdor.accountservice.entity;
 
-import java.time.LocalDate;
+import lombok.Data;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import java.time.LocalDate;
+import java.util.UUID;
 
 
 @Entity
-@Getter @Setter @ToString
+@Data
 public class Accounts {
 
     @Column(name = "customer_id")
     private int customerId;
-    @Column(name="account_number")
+    @Column(name = "account_number")
     @Id
-    private long accountNumber;
-    @Column(name="account_type")
+    private UUID accountNumber;
+    @Column(name = "account_type")
     private String accountType;
     @Column(name = "branch_address")
     private String branchAddress;
