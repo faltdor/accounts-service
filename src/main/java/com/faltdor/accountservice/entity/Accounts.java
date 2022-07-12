@@ -1,6 +1,9 @@
 package com.faltdor.accountservice.entity;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.Value;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,15 +13,15 @@ import java.util.UUID;
 
 
 @Entity
-@Data
+@Getter
 public class Accounts {
 
     @Column(name = "customer_id")
     private int customerId;
-    @Column(name = "account_number")
+    @Column(name="account_number")
     @Id
-    private UUID accountNumber;
-    @Column(name = "account_type")
+    private long accountNumber;
+    @Column(name="account_type")
     private String accountType;
     @Column(name = "branch_address")
     private String branchAddress;
