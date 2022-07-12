@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import java.util.List;
 
 
-@FeignClient( "cards" )
+@FeignClient( "card-service" )
 public interface CardsFeignClient {
 
     @RequestMapping( method = RequestMethod.POST, value = "myCards", consumes = "application/json" )

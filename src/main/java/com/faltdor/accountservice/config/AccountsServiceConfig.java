@@ -9,7 +9,7 @@ import java.util.Map;
 
 
 @Configuration
-@ConfigurationProperties( prefix = "accounts" )
+@ConfigurationProperties( prefix = "account.service" )
 @Data
 public class AccountsServiceConfig {
 

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import java.util.List;
 
 
-@FeignClient( "loans" )
+@FeignClient( "loan-service" )
 public interface LoansFeignClient {
 
     @RequestMapping( method = RequestMethod.POST, value = "myLoans", consumes = "application/json" )

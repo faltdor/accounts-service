@@ -17,7 +17,7 @@ import java.util.UUID;
 public class Accounts {
 
     @Column(name = "customer_id")
-    private int customerId;
+    private long customerId;
     @Column(name="account_number")
     @Id
     private long accountNumber;
