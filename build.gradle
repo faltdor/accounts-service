@@ -17,10 +17,10 @@ configurations {
 repositories {
     mavenCentral()
 }
-
-wrapper {
-    distributionType = Wrapper.DistributionType.ALL
-    gradleVersion = '5.6.4'
+def projectName = 'account-service'
+def organizationName = 'faltdor'
+bootBuildImage {
+    imageName = "${organizationName}/${projectName}"
 }
 
 ext {
